@@ -56,7 +56,7 @@ def triangle_right_justified(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: Do the following problem FIRST, then convert x's to spaces:
@@ -76,7 +76,7 @@ def triangle_right_justified(r):
     # -------------------------------------------------------------------------
     for k in range(1, r+1):
         for g in range(k,r):
-            print((g)*' ', end='')
+            print(' ', end='')
         for l in range(k):
             print(l+1, end='')
         print()
@@ -115,7 +115,7 @@ def triangle_upside_down(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -124,6 +124,8 @@ def triangle_upside_down(r):
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
     for k in range(r+1, 1, -1):
+        for g in range(r+1,k,-1):
+            print(' ', end='')
         for l in range(k-1):
             print(l+1, end='')
         print()
@@ -178,7 +180,15 @@ def vee(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
-
+    for k in range(r):
+            for g in range(k):
+                print(' ', end='')
+            for t in range(k, r):
+                print(t+1, end = '')
+            print('-', end='')
+            for l in range(r, k, -1):
+                print(l, end='')
+            print()
 
 def run_test_numbers_constant_forward():
     """ Tests the    numbers_constant_forward    function. """
@@ -226,7 +236,7 @@ def numbers_constant_forward(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: What loop structure do you need for this problem?
@@ -236,6 +246,13 @@ def numbers_constant_forward(r, maxnum, n):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
+    for k in range(r):
+        for g in range(1, maxnum+1):
+            print(' ', end='')
+            for l in range(n):
+                print(g, end='')
+        print()
+
 
 
 def run_test_numbers_constant_backwards():
@@ -270,7 +287,7 @@ def numbers_constant_backwards(r, maxnum, n):
     Preconditions:  r, maxnum and n are positive integers.
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -279,6 +296,12 @@ def numbers_constant_backwards(r, maxnum, n):
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
 
+    for k in range(r, 0, -1):
+        for g in range(maxnum, 1, -1):
+            print(' ', end='')
+            for l in range(n):
+                print(g, end='')
+        print()
 
 def run_test_numbers_increasing_forward():
     """ Tests the    numbers_increasing_forward    function. """
@@ -322,7 +345,7 @@ def numbers_increasing_forward(r, maxnum):
     Preconditions:  r and maxnum are positive integers.
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -330,6 +353,12 @@ def numbers_increasing_forward(r, maxnum):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
+    for k in range(r, 0, -1):
+        for g in range(maxnum):
+            print(' ', end='')
+            for l in range(g):
+                print(g, end='')
+        print()
 
 
 # -----------------------------------------------------------------------------
