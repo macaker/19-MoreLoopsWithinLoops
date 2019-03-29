@@ -4,8 +4,8 @@ in the context of PRINTING on the CONSOLE.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Emily Macak.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -74,7 +74,12 @@ def triangle_right_justified(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
-
+    for k in range(1, r+1):
+        for g in range(k,r):
+            print((g)*' ', end='')
+        for l in range(k):
+            print(l+1, end='')
+        print()
 
 def run_test_triangle_upside_down():
     """ Tests the    triangle_upside_down    function. """
@@ -118,6 +123,10 @@ def triangle_upside_down(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
+    for k in range(r+1, 1, -1):
+        for l in range(k-1):
+            print(l+1, end='')
+        print()
 
 
 def run_test_vee():
