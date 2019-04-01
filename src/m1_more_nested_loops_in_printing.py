@@ -172,7 +172,7 @@ def vee(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -183,10 +183,10 @@ def vee(r):
     for k in range(r):
             for g in range(k):
                 print(' ', end='')
-            for t in range(k, r):
+            for t in range(0, r-k):
                 print(t+1, end = '')
             print('-', end='')
-            for l in range(r, k, -1):
+            for l in range(r-k, 0, -1):
                 print(l, end='')
             print()
 
