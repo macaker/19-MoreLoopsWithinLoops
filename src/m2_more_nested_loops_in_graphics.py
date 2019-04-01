@@ -66,9 +66,11 @@ def draw_upside_down_wall(rectangle, n, window):
 
     for l in range(n):
         for k in range(l):
+            corner_1.x = corner_1.x + k*width/2
+            corner_2.x = corner_2.x + k*width/2
             new_rectangle = rg.Rectangle(rectangle.corner_1, rectangle.corner_2)
             new_rectangle.attach_to(window)
-            window.render(.1)
+            window.render(.5)
             corner_1.x = corner_1.x - width
             corner_2.x = corner_2.x - width
         corner_1.x = origional_x - 1.5*width
